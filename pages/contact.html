@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projets</title>
+    <title>Mon Portfolio</title>
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
@@ -18,28 +18,25 @@
         </nav>
     </header>
     <main>
-        <section id="projet-courant">
-            <div class="projet-text">
-                <h2>Titre du projet</h2>
-                <p>Description du projet...</p>
-            </div>
-            <div class="projet-image">
-                <img src="/assets/Projets/projet.svg" alt="Illustration du projet" />
-            </div>
-            <div class="lien">
-                <a class="git"> Lien vers le github</a>
-                <a class="jeux"> Joué </a>
-            </div>
+        <section id="contact">
+            <h2>Contactez-moi</h2>
+            <form action="envoyer_email.php" method="POST">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+                <br>
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" required></textarea>
+                <br>
+                <input type="submit" value="Envoyer">
+            </form>
         </section>
-        <div class="projet-navigation">
-            <button id="prev-projet">&lt;</button>
-            <button id="next-projet">&gt;</button>
-        </div>
     </main>
     <footer>
         <p>Email: g.cabecassegura@gmail.com</p>
         <p>Téléphone: +33 6 12 91 38 74</p>
     </footer>
-    <script src="/scripts/projet.js"></script>
 </body>
 </html>

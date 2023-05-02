@@ -187,3 +187,58 @@ footer p {
 .projet-navigation button:hover {
     color: #ccc;
 }
+
+/* Styles pour le formulaire de contact */
+#contact {
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 2rem;
+    margin: 6rem auto 2rem;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#contact label {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#contact textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+#contact input[type="submit"] {
+    display: inline-block;
+    background-color: #333;
+    color: #f4f4f4;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 3px;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #444;
+}
