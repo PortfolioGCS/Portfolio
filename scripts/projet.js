@@ -13,7 +13,6 @@ const projets = [
       github : "",
       jeux : ''
     },
-    // Ajoutez d'autres projets ici
   ];
 
   let currentIndex = 0;
@@ -31,8 +30,14 @@ const projets = [
     projetImage.setAttribute('src', projet.image);
     projetImage.setAttribute('alt', `Illustration du ${projet.titre}`);
     document.querySelector('.git').setAttribute('href', projet.github);
-    document.querySelector('.jeux').setAttribute('href', projet.jeux);
-    document.querySelector('.jeux').setAttribute('target', '_blank');
+
+    if(projet.jeux == ''){
+      document.querySelector('.jeux').style.display = 'none';
+    }else{
+      document.querySelector('.jeux').style.display = 'block';
+      document.querySelector('.jeux').setAttribute('href', projet.jeux);
+      document.querySelector('.jeux').setAttribute('target', '_blank');
+    }
 
   }
   

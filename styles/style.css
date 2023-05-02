@@ -132,6 +132,29 @@ footer p {
     margin-top: 10%;
 }
 
+.lien {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+  
+  .lien a {
+    color: #f4f4f4;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    margin: 0 1rem;
+  }
+  
+  .lien a:hover {
+    color: #ccc;
+    text-decoration: none;
+  }
+
 .projet-image {
     flex: 1;
     display: flex;
