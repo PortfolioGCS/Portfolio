@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background-image: url("assets/autre/a.jpg");
+    background-size: cover;
+
+}
+
+#gameboard{
+    width: auto;
+    position: absolute;
+    display: grid;
+    grid-template-columns: repeat(10, 4vw);
+    grid-template-rows: repeat(10, 4vw);
+}
+
+#spann{
+    color: white;
+    font-size: 3vh;
+    display: flex;
+    margin-right: 1vw;
+}
+
+#compteur{
+    color: white;
+    font-size: 3vh;
+    text-align: center;
+    align-items: center;
+    display: flex;
+}
+
+#side {
+    width: 10vw;
+    height: 3vw;
+    top : 5vw;
+    left: 3vw;
+    background-image: url("assets/block/oak_planks.png");
+    position: absolute;
+    left: 5vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+
+}
+
+.uwu{
+    position: absolute;
+    top: 10vh;
+    left: 3vw;
+    color: red;
+    font-size: 3vh;
+    background-image: url("assets/autre/xd.jpg");
+    background-size: cover;
+    background-position: center;
+    width: 12vw;
+    height: 8vh;
+    text-align: center;
+
+}   
+
+#gameboard>div{
+    position: absolute;
+    height: 4vw;
+}
+
+#reset{
+    position: absolute;
+    top: 3vh;
+    align-items: center;
+    width: 10vw;
+    height: 5vh;
+    color: white;
+    background-image: url("assets/autre/xd.jpg");
+    background-size: cover;
+    background-position: center;
+
+}
+
+.empty{
+    background-image: url("assets/block/oak_planks.png");
+    background-size: 4vw 4vw;
+    height: 4vw;
+    width: 4vw; 
+}
+.wall{
+    background-image: url("assets/block/cobblestone.png");
+    background-size: 4vw 4vw;
+    height: 4vw;
+    width: 4vw; 
+}
+
+.box {
+    background-image: url("assets/block/box.png");
+    background-size: 4vw 4vw;
+    height: 4vw;
+    width: 4vw; 
+}
+
+.player{
+    /* background-image: url("assets/joueur/uwu.gif"); */
+    background-size: 4vw 4vw;
+    height: 4vw;
+    width: 4vw; 
+}
+
+.goal{
+    background-image: url("assets/block/goal.png");
+    background-size: 4vw 4vw;
+    height: 4vw;
+    width: 4vw; 
+}
+
+.boxOnGoal{
+    background-image: url("assets/block/netherite_block.png");
+    background-size: 4vw 4vw;
+    height: 4vw;
+    width: 4vw; 
+}
+
+.playerOnGoal{
+    /* background-image: url("assets/joueur/oni.gif"); */
+    background-size: 4vw 4vw;
+    height: 4vw;
+    width: 4vw; 
+}
+
+#menu {
+    width: 40vw;
+    height: 40vw;
+    background-image: url("assets/block/oak_planks.png");
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+#title {
+    font-size: 10vh;
+    color: white;
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+#start {
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    color: white;
+    background-color: black;
+}
+
+#option {
+    margin-top: 2vh;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    color: white;
+    background-color: black;
+}
+
+#back {
+    margin-top: 2vh;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    color: white;
+    background-color: black;
+}
+
+#slider {
+    margin-top: 2vh;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    color: white;
+    background-color: black;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+}
+
+#span {
+    margin-right: 1vw;
+    color: white;
+    z-index: 1;
+
+}
+#test {
+    width: 10vw;
+    height: 4vh;
+    background-color: white;
+    z-index: 0;
+}
+
+#k {
+    margin-top: 2vh;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    color: white;
+    background-color: black; 
+}
+
+#up {
+    margin-top: 2vh;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    color: white;
+    background-color: black;
+}
+
+#down {
+    margin-top: 2vh;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    color: white;
+    background-color: black;
+}
+
+#left {
+    margin-top: 2vh;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    color: white;
+    background-color: black;
+}
+
+#right {
+    margin-top: 2vh;
+    justify-content: center;
+    width: 10vw;
+    height: 4vh;
+    color: white;
+    background-color: black;
+}
