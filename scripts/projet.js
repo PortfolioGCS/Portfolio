@@ -13,6 +13,13 @@ const projets = [
       github : "https://github.com/PortfolioGCS/Groupie-Tracker",
       jeux : ""
     },
+    {
+      titre: "Bot Hyperplanning",
+      description: "bot discord en python permettant de savoir son cour du jour, le prochain, ou l'emploi du temps de la semaine. ",
+      image: "/assets/Projets/discord.png",
+      github : "https://github.com/PortfolioGCS/Bot-Hyperplanning",
+      jeux : ""
+    },
   ];
 
   let currentIndex = 0;
