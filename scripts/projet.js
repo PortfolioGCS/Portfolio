@@ -7,11 +7,11 @@ const projets = [
       jeux : "../boxxle/index.html"
     },
     {
-      titre: "Projet 2",
-      description: "Description du projet 2...",
-      image: "image-projet-2.svg",
-      github : "",
-      jeux : ''
+      titre: "Groupie Tracker",
+      description: "Application web permettant de suivre les concerts de vos artistes préférés. fait en golang ",
+      image: "/assets/Projets/groupie.png",
+      github : "https://github.com/PortfolioGCS/Groupie-Tracker",
+      jeux : ""
     },
   ];
 
@@ -30,6 +30,7 @@ const projets = [
     projetImage.setAttribute('src', projet.image);
     projetImage.setAttribute('alt', `Illustration du ${projet.titre}`);
     document.querySelector('.git').setAttribute('href', projet.github);
+    document.querySelector('.git').setAttribute('target', '_blank');
 
     if(projet.jeux == ''){
       document.querySelector('.jeux').style.display = 'none';
