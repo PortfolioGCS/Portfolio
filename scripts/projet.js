@@ -3,11 +3,15 @@ const projets = [
       titre: "Boxxle",
       description: "jeux en pure js ou le but est de pousser les caisses sur les emplacements prévus à cet effet pour passer au niveau suivant. ",
       image: "/assets/Projets/boxxle.png",
+      github : "https://github.com/PortfolioGCS/Boxxle",
+      jeux : "../boxxle/index.html"
     },
     {
       titre: "Projet 2",
       description: "Description du projet 2...",
       image: "image-projet-2.svg",
+      github : "",
+      jeux : ''
     },
     // Ajoutez d'autres projets ici
   ];
@@ -26,6 +30,10 @@ const projets = [
     projetDescription.textContent = projet.description;
     projetImage.setAttribute('src', projet.image);
     projetImage.setAttribute('alt', `Illustration du ${projet.titre}`);
+    document.querySelector('.git').setAttribute('href', projet.github);
+    document.querySelector('.jeux').setAttribute('href', projet.jeux);
+    document.querySelector('.jeux').setAttribute('target', '_blank');
+
   }
   
   function prevProjet() {
