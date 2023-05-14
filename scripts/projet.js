@@ -20,6 +20,20 @@ const projets = [
       github : "https://github.com/PortfolioGCS/Bot-Hyperplanning",
       jeux : ""
     },
+    {
+      titre: "Challenge 48",
+      description: "Site de ticket pour entraide avec des recompense. fait avec symfony, vuejs et js",
+      image: "/assets/Projets/chall.png",
+      github : "",
+      jeux : ""
+    },
+    {
+      titre: "Autre",
+      description: "Mes autres projet sont disponible sur mon github",
+      image: "/assets/Projets/github.png",
+      github : "https://github.com/GaspardCS",
+      jeux : ""
+    },
   ];
 
   let currentIndex = 0;
