@@ -21,6 +21,10 @@ body {
 main {
     padding: 2rem;
     flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    gap: 2rem;
 }
 
 footer {
@@ -115,6 +119,7 @@ footer p {
 
 #projet-courant {
     display: flex;
+    position: relative;
     background-color: #2a2a2a;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     border-radius: 5px;
@@ -163,15 +168,15 @@ footer p {
 
 .projet-navigation {
     position: absolute;
-    top: 50%;
+    margin-bottom: 0px;
+    bottom: 0;
     left: 50%; /* Ajoutez cette ligne */
     transform: translate(-50%, -50%); /* Ajoutez cette ligne */
     display: flex;
     justify-content: space-between;
-    width: 60%; /* Ajoutez cette ligne */
+    width: 80%; /* Ajoutez cette ligne */
     padding: 0 1rem;
     box-sizing: border-box;
-    margin-top: -2rem;
     z-index: 1;
   }
 
@@ -342,4 +347,79 @@ footer p {
     height: 300px;
     overflow: hidden;
     border-radius: 5px;
+}
+
+.acceui {
+    grid-row: 1;
+}
+
+.proj {
+    grid-row: 2;
+    display: flex;
+    justify-content: space-around; /* Remplacez "center" par "space-around" pour ajouter de l'espace entre les sections */
+}
+
+.proj section {
+    width: 40%; /* Ajustez cette valeur pour augmenter ou diminuer la largeur des sections */
+}
+
+.pros {
+    grid-row: 3;
+}
+
+
+
+.oni {
+    color: #f4f4f4;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: italic;
+    margin: 0 1rem;
+    font-size: 25px;
+    text-align: center;
+}
+
+#lang-switch {
+    background: #000; /* Couleur du fond noir */
+    -webkit-appearance: none; /* Pour enlever le style par défaut sur Webkit/Chrome */
+    border-radius: 60px;
+}
+
+#lang-switch::-webkit-slider-runnable-track {
+    background: #000; /* Couleur du fond noir pour la piste du slider sur Webkit/Chrome */
+    border-radius: 50%;
+}
+
+#lang-switch::-webkit-slider-thumb {
+    background: #888; /* Couleur du slider en gris sur Webkit/Chrome */
+    -webkit-appearance: none; /* Pour enlever le style par défaut sur Webkit/Chrome */
+    height: 20px; /* Hauteur du slider */
+    width: 20px; /* Largeur du slider */
+    border-radius: 100%; /* Pour rendre le slider arrondi sur Webkit/Chrome */
+}
+
+#lang-switch::-moz-range-track {
+    background: #000; /* Couleur du fond noir pour la piste du slider sur Firefox */
+    border-radius: 50%;
+}
+
+#lang-switch::-moz-range-thumb {
+    background: #888; /* Couleur du slider en gris sur Firefox */
+    height: 20px; /* Hauteur du slider */
+    width: 20px; /* Largeur du slider */
+    border-radius: 50%; /* Pour rendre le slider arrondi sur Firefox */
+}
+
+#lang-switch::-ms-track {
+    background: #000; /* Couleur du fond noir pour la piste du slider sur IE/Edge */
+    color: transparent; /* Pour enlever le style par défaut sur IE/Edge */
+    height: 20px; /* Hauteur du slider */
+    border-radius: 50%;
+}
+
+#lang-switch::-ms-thumb {
+    background: #888; /* Couleur du slider en gris sur IE/Edge */
+    height: 20px; /* Hauteur du slider */
+    width: 20px; /* Largeur du slider */
+    border-radius: 50%; /* Pour rendre le slider arrondi sur IE/Edge */
 }

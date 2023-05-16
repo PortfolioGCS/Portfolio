@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/styles/style.css">
 </head>
 <body>
-    <header>
+    <!-- <header>
         <nav>
             <ul>
                 <li><a href="#accueil">Accueil</a></li>
@@ -16,21 +16,114 @@
                 <li><a href="pages/contact.html">Contact</a></li>
             </ul>
         </nav>
+    </header> -->
+    <header>
+        <nav>
+            <ul style="display: flex; justify-content: space-between; align-items: center;">
+                <li style="flex-grow: 1;">Cabecas Segura Gaspard</li>
+                <li style="display: flex; align-items: center;">
+                    <label for="lang-switch" style="margin-right: 10px;">English</label>
+                    <input type="range" id="lang-switch" min="0" max="1" step="1" value="1" style="width: 50px;">
+                    <label for="lang-switch" style="margin-left: 10px;">Français</label>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <section id="accueil">
-            <div class="accueil-text">
-                <h1>Bienvenue sur mon Portfolio</h1>
-                <p>Je m'appelle Cabecas Segura Gaspard et je suis etudiant en informatique a Ynov Lyon.</p>
-            </div>
-            <div class="accueil-image">
-                <img src="/assets/Acceuil/photo.svg" alt="Votre photo" />
-            </div>
-        </section>
+        <div class="acceui">
+            <section id="accueil">
+                <div class="accueil-text">
+                    <h1>Bienvenue sur mon Portfolio</h1>
+                    <p>Je m'appelle Cabecas Segura Gaspard et je suis etudiant en informatique a Ynov Lyon.</p>
+                </div>
+                <div class="accueil-image">
+                    <img src="/assets/Acceuil/photo.svg" alt="Votre photo" />
+                </div>
+            </section>
+        </div>
+        <div class="pros">
+            <section id="contact">
+                <form id="contact-form" method="POST">
+                    <label for="name" class="n">Nom:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email" class="e">Email:</label>
+                    <input type="email" id="email" name="_replyto" required>
+                    
+                    <label for="message" class="m">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <input type="hidden" name="_subject" value="Nouveau message depuis le portfolio">
+                    <input type="hidden" name="_next" value="./thankyou.html">
+                    
+                    <div class="submit-button-container">
+                        <button type="submit" class="b">Envoyer</button>
+                    </div>
+                </form>
+        </div>
+        <div class="proj">
+            <section id="projet-courant">
+                <div class="projet-text">
+                    <h2>Titre du projet</h2>
+                    <p>Description du projet...</p>
+                </div>
+                <div class="projet-image">
+                    <img src="/assets/Projets/projet.svg" alt="Illustration du projet" />
+                </div>
+                <div class="lien">
+                    <a class="git"> Lien vers le github</a>
+                    <a class="jeux"> Essayé </a>
+                </div>
+                <div class="projet-navigation">
+                    <button id="prev-projet">&lt;</button>
+                    <button id="next-projet">&gt;</button>
+                </div>
+            </section>
+
+            <section id="propos">
+                <div class="propos-text">
+                    <h1>À propos de moi</h1>
+                    <a class="oni" href="../assets/propos/cv.pdf" target="_blank">Mon cv</a>
+                </div>
+                <div class="propos-image">
+                    <img src="/assets/propos/uwu.png" alt="Votre photo" />
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <p>Email: g.cabecassegura@gmail.com</p>
-        <p>Téléphone: +33 6 12 91 38 74</p>
+        <p class="tel">Téléphone: +33 6 12 91 38 74</p>
     </footer>
+    <script>
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            const formURL = 'https://formspree.io/f/xvonlrgv';
+
+            fetch(formURL, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then((response) => {
+                if (response.status === 200 || response.status === 201) {
+                    alert('Votre message a bien été envoyé. Merci !');
+                } else {
+                    alert('Erreur lors de l\'envoi du formulaire. Veuillez réessayer.');
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Erreur lors de l\'envoi du formulaire. Veuillez réessayer.');
+            });
+        });
+    </script>
+    <script src="/scripts/projet.js"></script>
 </body>
 </html>
