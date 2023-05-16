@@ -34,7 +34,7 @@ const projets = [
     description: "Site de gestion d'investissements avec génération de rapports et de fiches d'imposition.",
     image: "/assets/Projets/csim.png",
     github : "",
-    jeux : ""
+    jeux : "https://csim-finance.com/"
   },
   {
     titre: "Autre",
@@ -79,7 +79,7 @@ const projetsen = [
     description: "An investment management website with report generation and tax form support.",
     image: "/assets/Projets/csim.png",
     github: "",
-    jeux: ""
+    jeux: "https://csim-finance.com/"
   },
   {
     titre: "Other",
@@ -213,6 +213,10 @@ const formulaire = [
           document.querySelector('.m').textContent = formulaire[1].message;
           document.querySelector('.b').textContent = formulaire[1].envoyer;
 
+          document.querySelector('.jeux').textContent = "Try";
+          document.querySelector('.git').textContent = "go to GitHub";
+  
+
           test = 0;
 
           updateProjet();
@@ -233,6 +237,9 @@ const formulaire = [
           document.querySelector('.n').textContent = formulaire[0].nom;
           document.querySelector('.m').textContent = formulaire[0].message;
           document.querySelector('.b').textContent = formulaire[0].envoyer;
+
+          document.querySelector('.jeux').textContent = "Essayer";
+          document.querySelector('.git').textContent = "aller sur GitHub";
 
           test = 1;
 
